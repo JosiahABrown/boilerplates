@@ -1,0 +1,12 @@
+# source: https://github.com/qdm12/gluetun-wiki/blob/main/setup/providers/protonvpn.md 
+version: "3"
+services: 
+  gluetun:
+    image: qmcgaw/gluetun
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - VPN_SERVICE_PROVIDER=protonvpn
+      - OPENVPN_USER=abc
+      - OPENVPN_PASSWORD=abc
+      - SERVER_COUNTRIES= # Optional
